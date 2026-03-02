@@ -29,17 +29,17 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public ResponseEntity<List<ProductResponse>> readAllUsers(){
+    public ResponseEntity<List<ProductResponse>> readAllProducts(){
 
-        List<ProductResponse> list = productService.readAllUsers();
+        List<ProductResponse> list = productService.readAllProducts();
 
         return ResponseEntity.status(HttpStatus.OK).body(list);
     }
 
     @GetMapping("/products/{productId}")
-    public ResponseEntity<ProductResponse> readUser(@PathVariable("productId") Long userId){
+    public ResponseEntity<ProductResponse> readProduct(@PathVariable("productId") Long userId){
 
-        ProductResponse productResponse = productService.readUser(userId);
+        ProductResponse productResponse = productService.readProduct(userId);
 
         return ResponseEntity.status(HttpStatus.OK).body(productResponse);
     }

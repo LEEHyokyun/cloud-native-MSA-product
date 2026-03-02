@@ -29,11 +29,11 @@ public class ProductService {
         return ProductResponse.from(product);
     }
 
-    public ProductResponse readUser(Long productId) {
+    public ProductResponse readProduct(Long productId) {
         return ProductResponse.from(productRepository.findById(productId).orElse(null));
     }
 
-    public List<ProductResponse> readAllUsers() {
+    public List<ProductResponse> readAllProducts() {
         return productRepository.findAll().stream()
                 .map(ProductResponse::from)//Entity > Dto
                 .toList();
