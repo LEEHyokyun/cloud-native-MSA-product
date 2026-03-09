@@ -55,6 +55,11 @@ allprojects {
         implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
         /*
+        * kafka
+        * */
+        implementation 'org.springframework.kafka:spring-kafka'
+
+        /*
         * mysql / jpa
         * */
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

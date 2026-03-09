@@ -7,6 +7,12 @@ spring:
     config:
       uri: http://localhost:8888
   #      name: ecommerce
+  kafka:
+    consumer:
+      group-id: cloud-native-msa-product
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      enable-auto-commit: false # 메시지 유실 위험 존재 .. enable auto commit = false
   profiles:
     active: dev #활성화 대상
 

@@ -35,4 +35,11 @@ public class Product {
 
         return product;
     }
+
+    public void updateQty(Long orderedQty){
+
+        this.productQty -= orderedQty;
+        this.updatedAt = LocalDateTime.now();
+
+    }
 }
