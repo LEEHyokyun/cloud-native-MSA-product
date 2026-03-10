@@ -12,8 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderCreatedEventPayload implements EventPayload {
-    private String topic;
-    private EventType eventType;
     private Long productId;
     private Long orderedQty;
 }

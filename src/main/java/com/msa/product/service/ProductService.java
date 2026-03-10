@@ -6,7 +6,7 @@ import com.msa.product.model.entity.Product;
 import com.msa.product.model.request.ProductCreateRequest;
 import com.msa.product.model.response.ProductResponse;
 import com.msa.product.repository.ProductRepository;
-import com.msa.product.service.eventhandler.EventHandler;
+import com.msa.product.infra.event.eventhandler.EventHandler;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -56,7 +56,7 @@ public class ProductService {
         EventHandler<EventPayload> eventHandler = findEventHandler(event);
 
         if(eventHandler == null){
-            log.error("[ERROR][ProductService] No Such EventHa found");
+            log.error("[ERROR][ProductService] No Such EventHandler found");
             return;
         }
 
