@@ -1,4 +1,4 @@
-package com.msa.product.infra.consumer.order;
+package com.msa.product.infra.consumer;
 
 import com.msa.product.infra.event.Event;
 import com.msa.product.infra.event.payload.EventPayload;
