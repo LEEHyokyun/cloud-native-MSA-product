@@ -13,6 +13,8 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       enable-auto-commit: false # 메시지 유실 위험 존재 .. enable auto commit = false
+    listener:
+      ack-mode: manual
   profiles:
     active: dev #활성화 대상
 
