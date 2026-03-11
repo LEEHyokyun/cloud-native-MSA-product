@@ -1,7 +1,8 @@
-package com.msa.product.infra.event.eventhandler;
+package com.msa.product.service.eventhandler;
 
 import com.msa.product.infra.event.Event;
 import com.msa.product.infra.event.EventType;
+import com.msa.product.infra.event.eventhandler.EventHandler;
 import com.msa.product.infra.event.payload.OrderCreatedEventPayload;
 import com.msa.product.model.entity.Product;
 import com.msa.product.repository.ProductRepository;
